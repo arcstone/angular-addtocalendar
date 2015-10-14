@@ -16,6 +16,17 @@ angular.module('jshor.angular-addtocalendar', [])
 			return dateObj.toString();
 		};
 
+		var toDate = function(date) {
+			var dateObj = new Date();
+			dateObj.setFullYear(date.substring(0, 4));
+			dateObj.setDate(date.substring(6, 8));
+			dateObj.setMonth(parseInt(date.substring(4, 6))-1);
+			dateObj.setHours(date.substring(9, 11));
+			dateObj.setMinutes(date.substring(11, 13));
+			dateObj.setSeconds(date.substring(13, 15));
+			return dateObj.toString();
+		};
+
 		$scope.description = $scope.description || '';
 		$scope.getIcsCalendarUrl = function() {
 			cal.addEvent($scope.title, $scope.description, $scope.location, ($scope.utc == true) ? utcToDate($scope.startDate) : toDate($scope.startDate), ($scope.utc == true) ? utcToDate($scope.endDate) : toDate($scope.endDate));
