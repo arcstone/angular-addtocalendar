@@ -1,6 +1,6 @@
 {
-  "name": "angular-addtocalendar",
-  "version": "0.0.5",
+  "name": "angular-strap-addtocalendar",
+  "version": "0.0.1",
   "authors": [
     "Josh Shor <jpshor@gmail.com>"
   ],
@@ -21,7 +21,6 @@
     "ics.js": "~0.1.3"
   },
   "license": "MIT",
-  "homepage": "https://github.com/jshor/angular-addtocalendar",
   "ignore": [
     "**/.*",
     "node_modules",
