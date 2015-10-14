@@ -2,6 +2,30 @@
 
 angular.module('jshor.angular-addtocalendar', [])
 	.controller('AddtocalendarCtrl', function($scope) {
+
+		var calendarTypes = [
+			{
+				"text":"iCalendar",
+				"href":getIcsCalendarUrl()
+			},
+			{
+				"text":"Google Calendar",
+				"href":calendarUrl.google
+			},
+			{
+				"text":"Outlook",
+				"href":getIcsCalendarUrl()
+			},
+			{
+				"text":"Yahoo! Calendar",
+				"href":calendarUrl.yahoo
+			},
+			{
+				"text":"Microsoft Calendar",
+				"href":calendarUrl.microsoft
+			}
+		];
+
 		var cal = ics();
 
 		var utcToDate = function(date) {
@@ -84,5 +108,22 @@ angular.module('jshor.angular-addtocalendar', [])
 				  </ul>\
 				</div>\
 			'
+		};
+	}).directive('addtocalendar-strap', function(){
+		return {
+			restrict: 'E',
+			scope: {
+				startDate 	: '@',
+				endDate 	: '@',
+				title 		: '@',
+				description 	: '@',
+				location 	: '@',
+				className 	: '@',
+				btnText 	: '@'
+			},
+			controller: 'AddtocalendarCtrl',
+			template: '\
+				<button type="button" class="btn btn-sm btn-default" data-animation="am-flip-x" bs-dropdown="calendarTypes" aria-haspopup="true" aria-expanded="false">Add to calendar</button> \
+				'
 		};
 	});
