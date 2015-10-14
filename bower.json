@@ -5,7 +5,7 @@
     "Josh Shor <jpshor@gmail.com>",
     "Diego Machado <diego.machado@towerhousestudio.com>"
   ],
-  "description": "AngularJS directive for adding events to calendar apps",
+  "description": "AngularJS directive for adding events to calendar apps, now it also suports angular-strap",
   "main": "addtocalendar.js",
   "keywords": [
     "icalendar",

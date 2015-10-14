@@ -3,29 +3,6 @@
 angular.module('jshor.angular-addtocalendar', [])
 	.controller('AddtocalendarCtrl', function($scope) {
 
-		var calendarTypes = [
-			{
-				"text":"iCalendar",
-				"href":getIcsCalendarUrl()
-			},
-			{
-				"text":"Google Calendar",
-				"href":calendarUrl.google
-			},
-			{
-				"text":"Outlook",
-				"href":getIcsCalendarUrl()
-			},
-			{
-				"text":"Yahoo! Calendar",
-				"href":calendarUrl.yahoo
-			},
-			{
-				"text":"Microsoft Calendar",
-				"href":calendarUrl.microsoft
-			}
-		];
-
 		var cal = ics();
 
 		var utcToDate = function(date) {
@@ -80,6 +57,32 @@ angular.module('jshor.angular-addtocalendar', [])
 			google 		: getGoogleCalendarUrl(),
 			yahoo 		: getYahooCalendarUrl()
 		};
+
+		$scope.calendarTypes = [
+			{
+				"text":"iCalendar",
+				"click":"getIcsCalendarUrl()"
+			},
+			{
+				"text":"Google Calendar",
+				"href":$scope.calendarUrl.google,
+				"target":"_blank"
+			},
+			{
+				"text":"Outlook",
+				"click":"getIcsCalendarUrl()"
+			},
+			{
+				"text":"Yahoo! Calendar",
+				"href":$scope.calendarUrl.yahoo,
+				"target":"_blank"
+			},
+			{
+				"text":"Microsoft Calendar",
+				"href":$scope.calendarUrl.microsoft,
+				"target":"_blank"
+			}
+		];
 	})
 	.directive('addtocalendar', function() {
     return {

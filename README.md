@@ -7,11 +7,8 @@ Enjoy!
 
 ## Installation
 
-    bower install angular-addtocalendar
+    bower install angular-strap-addtocalendar
 
-## Demo
-
-For a demo, please [click here](http://jshor.github.io/angular-addtocalendar/).
 
 ## Example
 
@@ -25,6 +22,19 @@ For a demo, please [click here](http://jshor.github.io/angular-addtocalendar/).
  		btn-text="Add to calendar"
  	></addtocalendar>
 
+
+ 	Or
+
+ 	<addtocalendarstrap
+   		start-date="20150704T190000"
+   		end-date="20150704T210000"
+   		title="Fourth of July Fireworks"
+   		location="Battery Park City, New York, NY"
+   		class-name="btn btn-sm btn-default dropdown-toggle"
+   		description="Celebrate the independence of the United States with fireworks in one of the greatest cities in the world."
+   		btn-text="Add to calendar"
+   	></addtocalendarstrap>
+
 ## Attributes
 
 | **Attribute** 	| **Description**                                                                                              	| **Format**                                                                   	| **Example**                                                                                                	| **Required** 	|
@@ -37,10 +47,3 @@ For a demo, please [click here](http://jshor.github.io/angular-addtocalendar/).
 | `class-name`  	| The bootstrap class for the dropdown button ([more info](http://getbootstrap.com/components/#btn-dropdowns)) 	| Bootstrap class/plain text. Default `btn btn-sm btn-default dropdown-toggle` 	| btn btn-sm btn-default dropdown-toggle                                                                     	| No           	|
 | `btn-text`  	| Text for the button to display								 	| Plain text. Default `Add to calendar`					| Add to your calendar now!                                                                    		| No           	|
 
-## Bugs
-
-Please report all bugs [here](https://github.com/jshor/angular-addtocalendar/issues).
-
-## Changelog
-
-Available [here](https://github.com/jshor/angular-addtocalendar/blob/master/CHANGELOG.md).
