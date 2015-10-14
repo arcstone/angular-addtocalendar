@@ -2,7 +2,8 @@
   "name": "angular-strap-addtocalendar",
   "version": "0.0.6",
   "authors": [
-    "Josh Shor <jpshor@gmail.com>"
+    "Josh Shor <jpshor@gmail.com>",
+    "Diego Machado <diego.machado@towerhousestudio.com>"
   ],
   "description": "AngularJS directive for adding events to calendar apps",
   "main": "addtocalendar.js",
