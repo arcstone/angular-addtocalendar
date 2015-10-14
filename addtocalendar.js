@@ -112,7 +112,7 @@ angular.module('jshor.angular-addtocalendar', [])
 				</div>\
 			'
 		};
-	}).directive('addtocalendar-strap', function(){
+	}).directive('addtocalendarstrap', function(){
 		return {
 			restrict: 'E',
 			scope: {
