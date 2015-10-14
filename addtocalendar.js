@@ -18,7 +18,7 @@ angular.module('jshor.angular-addtocalendar', [])
 
 		$scope.description = $scope.description || '';
 		$scope.getIcsCalendarUrl = function() {
-			cal.addEvent($scope.title, $scope.description, $scope.location, utcToDate($scope.startDate), utcToDate($scope.endDate));
+			cal.addEvent($scope.title, $scope.description, $scope.location, ($scope.utc == true) ? utcToDate($scope.startDate) : toDate($scope.startDate), ($scope.utc == true) ? utcToDate($scope.endDate) : toDate($scope.endDate));
 			return cal.download();
 		};
 
